@@ -50,7 +50,7 @@ nav:
 # GitHub Pages: if the site lives at https://USER.github.io/REPO/
 # set baseurl to "/REPO". For https://USER.github.io/ leave it "".
 # -------------------------------------------------------------
-baseurl: ""
+baseurl: "/safe-search"
 url: ""
 
 markdown: kramdown
