@@ -1,0 +1,24 @@
+{% assign d = site.data.cfp %}
+<section id="cfp" class="section">
+  <div class="container">
+    <h2>Call for Papers</h2>
+    {% if d.intro %}<p>{{ d.intro }}</p>{% endif %}
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Type</th><th>Length</th><th>Description</th></tr></thead>
+        <tbody>
+          {% for t in d.types %}
+          <tr><td class="nowrap"><strong>{{ t.name }}</strong></td><td>{{ t.length }}</td><td>{{ t.description }}</td></tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+    {% if d.notes %}
+    <ul class="notes">
+      {% for n in d.notes %}
+      <li>{{ n | markdownify | remove: '<p>' | remove: '</p>' }}</li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+  </div>
+</section>

@@ -1,0 +1,12 @@
+# Organizers. `photo` is a filename in assets/img/organizers/ (e.g. "desai.jpg").
+# Leave `photo` empty to show initials. `url` is optional (personal page).
+- { name: Shasvat Desai,        affiliation: "Walmart Global Tech, USA",                     url: "https://www.shasvat-desai.com/", photo: }
+- { name: Utshab Kumar Ghosh,   affiliation: "Missouri University of Science and Technology, USA", url: "https://utshabkg.github.io/", photo: }
+- { name: Ozel Yilmazel,        affiliation: "University of Massachusetts Amherst, USA",     url: "https://oz03-hub.github.io/", photo: }
+- { name: Rheeya Uppaal,        affiliation: "University of Wisconsin–Madison, USA",         url: "https://uppaal.github.io/", photo: }
+- { name: Vijeta Deshpande,     affiliation: "University of Massachusetts Lowell, USA",      url: "https://www.linkedin.com/in/vijeta-deshpande/", photo: }
+- { name: Keigo Sakurai,        affiliation: "Hokkaido University, Japan",                   url: "https://keigo-sakurai.github.io/", photo: }
+- { name: Utkarsh Porwal,       affiliation: "Apple, USA",                                   url: "https://www.linkedin.com/in/utkarshporwal/", photo: }
+- { name: Shubham Chatterjee,   affiliation: "Missouri University of Science and Technology, USA", url: "https://shubham-chatterjee-mst.github.io/", photo: }
+- { name: Tracy Holloway King,  affiliation: "Adobe, USA",                                   url: "https://sites.google.com/site/tracyhollowayking/", photo: }
+- { name: Debasis Ganguly,      affiliation: "University of Glasgow, UK",                    url: "https://gdebasis.github.io/", photo: }

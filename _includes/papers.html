@@ -1,0 +1,17 @@
+<section id="papers" class="section">
+  <div class="container">
+    <h2>Accepted Papers</h2>
+    {% if site.data.papers.size > 0 %}
+    <ol class="papers">
+      {% for p in site.data.papers %}
+      <li>
+        <div class="paper-title">{% if p.url %}<a href="{{ p.url }}">{{ p.title }}</a>{% else %}{{ p.title }}{% endif %}</div>
+        <div class="muted">{{ p.authors }}{% if p.type %} · {{ p.type }}{% endif %}</div>
+      </li>
+      {% endfor %}
+    </ol>
+    {% else %}
+    <p class="muted">To be announced after notification.</p>
+    {% endif %}
+  </div>
+</section>

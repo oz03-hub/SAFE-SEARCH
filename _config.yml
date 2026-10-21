@@ -1,0 +1,62 @@
+# =============================================================
+#  Site settings — edit these to change the header, nav, footer.
+#  After editing _config.yml, restart `jekyll serve` to see changes.
+# =============================================================
+
+# Short name (nav brand, browser tab)
+short_title: SAFE-SEARCH
+# Full workshop name (hero subtitle)
+title: "Safety, Accountability, Faithfulness, and Evaluation in Conversational Search"
+description: "SAFE-SEARCH workshop at ECIR 2027 on guardrails for multi-turn conversational search."
+
+# Event line shown under the title
+conference: ECIR 2027
+conference_url: "https://ecir2027.org"   # TODO: confirm URL
+location: "St Mary's Stadium, Southampton, UK"
+date: "21–25 March 2027"   # conference dates; exact workshop day TBD
+format: "Half-day, in-person workshop"
+# Exact workshop day (YYYY-MM-DD) + venue timezone. Enables "Add to calendar" in Program.
+workshop_date: "2027-03-25"
+timezone: Europe/London   # .ics embeds UK DST rules; update safe-search.ics if venue changes
+
+# Hero buttons (remove an entry to hide it)
+buttons:
+  - label: Call for Papers
+    url: "#cfp"
+  - label: Submit
+    url: /submit/     # separate page, content in _data/submission.yml
+
+contact:
+  email: "safe-search-workshop@example.com"   # TODO
+  # Optional social links; delete lines you don't need
+  links:
+    # - label: X / Twitter
+    #   url: https://x.com/...
+
+# Top navigation. `id` = section on the main page; `url` = separate page. Remove a line to hide it.
+nav:
+  - { label: About,       id: about }
+  - { label: Topics,      id: topics }
+  - { label: Call for Papers, id: cfp }
+  - { label: Dates,       id: dates }
+  - { label: Program,     id: program }
+  - { label: Speakers,    id: speakers }
+  - { label: Papers,      id: papers }
+  - { label: Organizers,  id: organizers }
+  - { label: Contact,     id: contact }
+  - { label: Submit,      url: /submit/ }
+
+# -------------------------------------------------------------
+# GitHub Pages: if the site lives at https://USER.github.io/REPO/
+# set baseurl to "/REPO". For https://USER.github.io/ leave it "".
+# -------------------------------------------------------------
+baseurl: ""
+url: ""
+
+markdown: kramdown
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - "*.pdf"
+  - vendor

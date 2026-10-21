@@ -1,0 +1,26 @@
+# About section. Paragraphs support Markdown (**bold**, *italic*, [links](url)).
+paragraphs:
+  - >-
+    Modern conversational search extends traditional IR into multi-turn interaction, where systems
+    maintain context, infer evolving intent, reformulate queries, and increasingly invoke tools or
+    take agentic actions. These capabilities create new guardrail needs across the search process.
+    Intent may become adversarial over multiple turns. Retrieved content can steer downstream
+    generation or propagate earlier errors. Systems must also decide when to answer, clarify,
+    correct, abstain, or refuse.
+  - >-
+    **SAFE-SEARCH** is organized around four dimensions. **Safety** covers harmful and adversarial
+    interactions, including evolving malicious intent, jailbreaks, and unsafe agent behavior.
+    **Accountability** addresses privacy, bias, transparency, and responsible treatment of users and
+    their data over time. **Faithfulness** concerns reliable retrieved information and grounded
+    responses that do not carry errors across turns. **Evaluation and effective intervention**
+    focuses on how guardrails should be assessed and how systems should respond to uncertainty or risk.
+  - >-
+    The workshop brings together researchers and practitioners from IR, conversational search, NLP,
+    recommender systems, and security to develop a shared taxonomy of multi-turn failure modes,
+    identify evaluation and benchmark gaps, and outline priorities for future guardrail research
+    and shared tasks.
+
+# Highlighted question (leave empty to hide)
+question: >-
+  How should a conversational search system behave safely and reliably as the user's information
+  need, retrieved evidence, conversational context, and system actions evolve over multiple turns?

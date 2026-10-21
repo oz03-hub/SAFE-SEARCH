@@ -1,0 +1,34 @@
+# Submission page (/submit/). Text fields support Markdown.
+# Paper types/page limits are reused from _data/cfp.yml; deadlines from _data/dates.yml.
+
+# Google Form link. While empty, the button shows "Submission form opens soon".
+form_url: ""
+form_label: "Submit via Google Form"
+
+intro: >-
+  We welcome submissions on safety, accountability, faithfulness, and evaluation in conversational
+  search. Please read the guidelines below before submitting.
+
+# Each group becomes a heading with a bullet list.
+rules:
+  - title: Format
+    items:
+      - "Page limits exclude references (see table above)."
+      - "Formatting template: **TBD**."
+      - "Submissions must be in PDF format and written in English."
+
+  - title: Review
+    items:
+      - "Each submission will be reviewed by at least two members of the Program Committee."
+      - "Review model (single- or double-blind): **TBD**."
+      - "Accepted research papers may be presented orally or as posters, as determined by the Program Committee."
+
+  - title: Presentation and publication
+    items:
+      - "At least one author of each accepted contribution is expected to attend the workshop in person and present."
+      - "We plan to publish accepted papers in CEUR Workshop Proceedings, subject to eligibility."
+
+  - title: How to submit
+    items:
+      - "Fill in the Google Form below with paper title, authors, contribution type, and upload your PDF."
+      - "Questions? See [Contact](../#contact) on the main page."

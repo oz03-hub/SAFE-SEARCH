@@ -1,0 +1,18 @@
+<section id="speakers" class="section alt">
+  <div class="container">
+    <h2>Keynote Speakers</h2>
+    <div class="grid grid-2">
+      {% for p in site.data.speakers %}
+      <div class="card speaker">
+        {% include person.html p=p dir="speakers" %}
+        <div>
+          <div class="role">{{ p.role }}</div>
+          <h3>{% if p.url %}<a href="{{ p.url }}">{{ p.name }}</a>{% else %}{{ p.name }}{% endif %}</h3>
+          {% if p.affiliation != "" %}<div class="muted">{{ p.affiliation }}</div>{% endif %}
+          {% if p.bio %}<p class="bio">{{ p.bio }}</p>{% endif %}
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,24 @@
+# Call for papers. Text fields support Markdown.
+intro: "We solicit the following contribution types:"
+
+types:
+  - name: Original research papers
+    length: "Short (up to 6 pages) or full (up to 12 pages)"
+    description: "Completed research on the design, behavior, evaluation, or use of conversational search systems. Accepted papers may be presented orally or as posters."
+  - name: Demo and system papers
+    length: "Up to 6 pages"
+    description: "Implemented guardrail systems, evaluation frameworks, datasets, benchmarks, or tooling, with an emphasis on system design and technical capabilities."
+  - name: Experience reports
+    length: "Up to 6 pages"
+    description: "Lessons from building or evaluating conversational search systems, including incident analyses, production failures, red-teaming findings, and operational trade-offs."
+  - name: Position and vision papers
+    length: "Up to 6 pages"
+    description: "Research challenges, conceptual frameworks, taxonomies, emerging problem formulations, or well-supported positions intended to stimulate discussion."
+
+# Bullet notes below the table
+notes:
+  - "Page limits exclude references."
+  - "Submissions will be peer reviewed by at least two members of the Program Committee."
+  - "At least one author of each accepted contribution is expected to attend and present in person."
+  - "We plan to pursue archival publication through CEUR Workshop Proceedings, subject to eligibility."
+  - "Formatting and submission instructions: see the [submission page](submit/)."

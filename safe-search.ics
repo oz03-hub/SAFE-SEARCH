@@ -1,0 +1,37 @@
+---
+layout: null
+permalink: /safe-search.ics
+---
+{% if site.workshop_date != "" %}{% assign day = site.workshop_date | remove: '-' %}{% assign loc = site.location | replace: ',', '\,' %}{% assign stamp = site.time | date: "%Y%m%dT%H%M%SZ" %}BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//{{ site.short_title }}//Workshop Program//EN
+CALSCALE:GREGORIAN
+X-WR-CALNAME:{{ site.short_title }} @ {{ site.conference }}
+BEGIN:VTIMEZONE
+TZID:Europe/London
+BEGIN:STANDARD
+DTSTART:19701025T020000
+RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
+TZOFFSETFROM:+0100
+TZOFFSETTO:+0000
+TZNAME:GMT
+END:STANDARD
+BEGIN:DAYLIGHT
+DTSTART:19700329T010000
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU
+TZOFFSETFROM:+0000
+TZOFFSETTO:+0100
+TZNAME:BST
+END:DAYLIGHT
+END:VTIMEZONE
+{% for s in site.data.schedule.items %}{% assign t = s.time | split: '–' %}BEGIN:VEVENT
+UID:safe-search-{{ day }}-{{ forloop.index }}@{{ site.short_title | downcase }}
+DTSTAMP:{{ stamp }}
+DTSTART;TZID={{ site.timezone }}:{{ day }}T{{ t.first | strip | remove: ':' }}00
+DTEND;TZID={{ site.timezone }}:{{ day }}T{{ t.last | strip | remove: ':' }}00
+SUMMARY:{{ site.short_title }}: {{ s.title | replace: ',', '\,' }}
+LOCATION:{{ loc }}
+{% if s.detail %}DESCRIPTION:{{ s.detail | replace: ',', '\,' }}
+{% endif %}END:VEVENT
+{% endfor %}END:VCALENDAR
+{% endif %}

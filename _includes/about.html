@@ -1,0 +1,12 @@
+{% assign d = site.data.about %}
+<section id="about" class="section">
+  <div class="container">
+    <h2>About</h2>
+    {% for p in d.paragraphs %}
+    {{ p | markdownify }}
+    {% endfor %}
+    {% if d.question %}
+    <blockquote class="callout">{{ d.question }}</blockquote>
+    {% endif %}
+  </div>
+</section>

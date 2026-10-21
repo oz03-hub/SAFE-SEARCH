@@ -1,0 +1,12 @@
+<section id="contact" class="section{% if site.data.committee.size > 0 %} alt{% endif %}">
+  <div class="container">
+    <h2>Contact</h2>
+    <p>Questions about the workshop? Email us at
+      <a href="mailto:{{ site.contact.email }}">{{ site.contact.email }}</a>.</p>
+    {% if site.contact.links %}
+    <p class="links">
+      {% for l in site.contact.links %}<a href="{{ l.url }}">{{ l.label }}</a>{% unless forloop.last %} · {% endunless %}{% endfor %}
+    </p>
+    {% endif %}
+  </div>
+</section>

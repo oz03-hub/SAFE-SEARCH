@@ -1,0 +1,17 @@
+# Keynote speakers. `photo` is a filename in assets/img/speakers/ (optional).
+- name: Emine Yilmaz
+  role: Academic Keynote
+  affiliation: University College London
+  url: https://sites.google.com/site/emineyilmaz/
+  photo:
+  bio: >-
+    Professor of Computer Science at UCL, where she leads the Web Intelligence Group. Her work spans
+    information retrieval, conversational search, and evaluation.
+
+- name: To be announced
+  initials: "?"
+  role: Industry Keynote
+  affiliation: ""
+  url:
+  photo:
+  bio:

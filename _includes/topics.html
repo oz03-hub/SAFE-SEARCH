@@ -1,0 +1,19 @@
+{% assign d = site.data.topics %}
+<section id="topics" class="section alt">
+  <div class="container">
+    <h2>Topics of Interest</h2>
+    {% if d.intro %}<p>{{ d.intro }}</p>{% endif %}
+    <div class="grid grid-2">
+      {% for t in d.themes %}
+      <div class="card">
+        <h3>{{ t.title }}</h3>
+        <ul>
+          {% for item in t.items %}
+          <li>{{ item | markdownify | remove: '<p>' | remove: '</p>' }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

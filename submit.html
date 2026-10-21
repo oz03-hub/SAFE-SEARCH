@@ -1,0 +1,62 @@
+---
+layout: default
+title: Submission
+permalink: /submit/
+---
+{% assign d = site.data.submission %}
+{% assign cfp = site.data.cfp %}
+<section class="page-header">
+  <div class="container">
+    <a class="back" href="{{ '/' | relative_url }}">← Back to workshop</a>
+    <h1>Submission Guidelines</h1>
+    <p>{{ site.short_title }} @ {{ site.conference }} · {{ site.location }}</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    {% if d.intro %}<p>{{ d.intro }}</p>{% endif %}
+
+    <h2>Contribution Types</h2>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Type</th><th>Length</th><th>Description</th></tr></thead>
+        <tbody>
+          {% for t in cfp.types %}
+          <tr><td class="nowrap"><strong>{{ t.name }}</strong></td><td>{{ t.length }}</td><td>{{ t.description }}</td></tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+
+    <h2 class="spaced">Guidelines</h2>
+    <div class="rules">
+      {% for r in d.rules %}
+      <div class="rule">
+        <h3>{{ r.title }}</h3>
+        <ul>
+          {% for item in r.items %}
+          <li>{{ item | markdownify | remove: '<p>' | remove: '</p>' }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+      {% endfor %}
+    </div>
+
+    <h2 class="spaced">Important Dates</h2>
+    <dl class="dates">
+      {% for item in site.data.dates.items %}
+      <div class="date-row"><dt>{{ item.event }}</dt><dd>{{ item.date }}</dd></div>
+      {% endfor %}
+    </dl>
+    {% if site.data.dates.note %}<p class="muted">{{ site.data.dates.note }}</p>{% endif %}
+
+    <div class="submit-box">
+      {% if d.form_url != "" %}
+      <a class="btn btn-solid" href="{{ d.form_url }}" target="_blank" rel="noopener">{{ d.form_label }}</a>
+      {% else %}
+      <span class="btn btn-disabled">Submission form opens soon</span>
+      {% endif %}
+    </div>
+  </div>
+</section>

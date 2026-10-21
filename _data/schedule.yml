@@ -1,0 +1,10 @@
+# Program. Set `break: true` to style a row as a break.
+note: "Tentative half-day program. Times may shift depending on the ECIR schedule."
+items:
+  - { time: "09:00 – 09:10", title: "Welcome and workshop goals" }
+  - { time: "09:10 – 09:40", title: "Keynote I (Academic)", detail: "Emine Yilmaz, University College London" }
+  - { time: "09:40 – 10:10", title: "Spotlight talks from accepted contributions" }
+  - { time: "10:10 – 10:30", title: "Coffee break", break: true }
+  - { time: "10:30 – 11:15", title: "Poster session" }
+  - { time: "11:15 – 11:45", title: "Keynote II (Industry)", detail: "TBA" }
+  - { time: "11:45 – 12:30", title: "Invited panel and community discussion" }

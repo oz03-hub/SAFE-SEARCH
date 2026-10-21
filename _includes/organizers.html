@@ -1,0 +1,16 @@
+<section id="organizers" class="section alt">
+  <div class="container">
+    <h2>Organizers</h2>
+    <div class="people">
+      {% for p in site.data.organizers %}
+      <div class="person">
+        {% if p.url %}<a href="{{ p.url }}">{% endif %}
+        {% include person.html p=p dir="organizers" %}
+        <div class="person-name">{{ p.name }}</div>
+        {% if p.url %}</a>{% endif %}
+        <div class="muted small">{{ p.affiliation }}</div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

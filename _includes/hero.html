@@ -1,0 +1,20 @@
+<section id="top" class="hero">
+  <div class="container">
+    <h1>{{ site.short_title }}</h1>
+    <p class="hero-subtitle">{{ site.title }}</p>
+    <p class="hero-meta">
+      Workshop at <a href="{{ site.conference_url }}">{{ site.conference }}</a>
+      {% if site.location and site.location != "TBD" %}<span class="sep">·</span> {{ site.location }}{% endif %}
+      {% if site.date and site.date != "TBD" %}<span class="sep">·</span> {{ site.date }}{% endif %}
+    </p>
+    {% if site.format %}<p class="hero-format">{{ site.format }}</p>{% endif %}
+    {% if site.buttons %}
+    <div class="hero-buttons">
+      {% for b in site.buttons %}
+      {% assign first_char = b.url | slice: 0 %}
+      <a class="btn{% if forloop.first %} btn-primary{% endif %}" href="{% if first_char == '/' %}{{ b.url | relative_url }}{% else %}{{ b.url }}{% endif %}">{{ b.label }}</a>
+      {% endfor %}
+    </div>
+    {% endif %}
+  </div>
+</section>

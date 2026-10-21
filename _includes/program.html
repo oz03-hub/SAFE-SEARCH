@@ -1,0 +1,39 @@
+{% assign d = site.data.schedule %}
+<section id="program" class="section">
+  <div class="container">
+    <h2>Program</h2>
+    <div class="program-head">
+      {% if d.note %}<p class="muted">{{ d.note }}</p>{% endif %}
+      <div class="cal-buttons">
+        {% if site.workshop_date != "" %}
+        {% assign day = site.workshop_date | remove: '-' %}
+        {% assign first_t = d.items.first.time | split: '–' | first | strip | remove: ':' %}
+        {% assign last_t = d.items.last.time | split: '–' | last | strip | remove: ':' %}
+        {% capture gcal_details %}Workshop at {{ site.conference }}.{% if site.url != "" %} Program: {{ '/' | absolute_url }}#program{% endif %}
+
+Program:
+{% for s in d.items %}{{ s.time }}  {{ s.title }}{% if s.detail %} — {{ s.detail }}{% endif %}
+{% endfor %}{% endcapture %}
+        <a class="btn-cal" href="{{ '/safe-search.ics' | relative_url }}" download>📅 Add to calendar (.ics)</a>
+        <a class="btn-cal" target="_blank" rel="noopener"
+           href="https://calendar.google.com/calendar/render?action=TEMPLATE&text={{ site.short_title | append: ' @ ' | append: site.conference | url_encode }}&dates={{ day }}T{{ first_t }}00/{{ day }}T{{ last_t }}00&ctz={{ site.timezone }}&location={{ site.location | url_encode }}&details={{ gcal_details | url_encode }}">Google Calendar</a>
+        {% else %}
+        <span class="btn-cal disabled" title="Available once the workshop day is announced">📅 Add to calendar (date TBA)</span>
+        {% endif %}
+      </div>
+    </div>
+    <div class="table-wrap">
+      <table class="schedule">
+        <thead><tr><th>Time</th><th>Session</th></tr></thead>
+        <tbody>
+          {% for s in d.items %}
+          <tr{% if s.break %} class="break"{% endif %}>
+            <td class="nowrap">{{ s.time }}</td>
+            <td>{{ s.title }}{% if s.detail %}<div class="muted">{{ s.detail }}</div>{% endif %}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>

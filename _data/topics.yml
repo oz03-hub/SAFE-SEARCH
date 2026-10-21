@@ -1,0 +1,25 @@
+# Topics of interest. Each theme has a title and a list of items.
+intro: >-
+  SAFE-SEARCH invites work across four complementary themes aligned with the SAFE framework,
+  with an emphasis on risks and interventions that emerge across multi-turn interactions.
+
+themes:
+  - title: Safety and Robustness
+    items:
+      - "**Evolving harmful intent:** harmful requests, jailbreaks, prompt injection, and adversarial behavior that develop or compound across turns."
+      - "**Context and memory risks:** failures introduced by dialogue history, persistent memory, cross-session information leakage, or accumulated context."
+
+  - title: Accountability and Responsible Interaction
+    items:
+      - "**Personalization and privacy over time:** responsible use of evolving user profiles, preferences, and conversational history."
+      - "**Sycophancy, over-reliance, and user autonomy:** cumulative influence across dialogue, including systems that increasingly reinforce user beliefs or preferences rather than remain grounded in evidence."
+
+  - title: Faithfulness and Reliability
+    items:
+      - "**Grounding across turns:** ensuring claims, corrections, and citations remain supported as evidence and conversational context evolve."
+      - "**Retrieval and source reliability over time:** handling conflicting, outdated, manipulated, or changing evidence across successive searches and responses."
+
+  - title: Evaluation and Effective Intervention
+    items:
+      - "**Multi-turn intervention strategies:** when to clarify, verify, re-search, correct, abstain, refuse, or restrict tool and agent actions as a dialogue evolves."
+      - "**Evaluation and deployment:** multi-turn benchmarks, red teaming, reliability of LLM-based judges, incident analyses, deployment lessons, and negative results."

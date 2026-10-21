@@ -1,0 +1,12 @@
+{% if site.data.committee.size > 0 %}
+<section id="committee" class="section">
+  <div class="container">
+    <h2>Program Committee</h2>
+    <ul class="committee">
+      {% for p in site.data.committee %}
+      <li>{{ p.name }}{% if p.affiliation %} <span class="muted">({{ p.affiliation }})</span>{% endif %}</li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+{% endif %}

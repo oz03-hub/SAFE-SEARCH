@@ -1,0 +1,7 @@
+{% comment %} Avatar for a person: photo if set, otherwise initials. Params: p, dir. Optional p.initials overrides {% endcomment %}
+{% if include.p.photo %}
+<img class="avatar" src="{{ '/assets/img/' | append: include.dir | append: '/' | append: include.p.photo | relative_url }}" alt="{{ include.p.name }}" loading="lazy">
+{% else %}
+{% assign parts = include.p.name | split: ' ' %}
+<div class="avatar avatar-initials" aria-hidden="true">{% if include.p.initials %}{{ include.p.initials }}{% else %}{{ parts.first | slice: 0 }}{% if parts.size > 1 %}{{ parts.last | slice: 0 }}{% endif %}{% endif %}</div>
+{% endif %}

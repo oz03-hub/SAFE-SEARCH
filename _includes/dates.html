@@ -1,0 +1,12 @@
+{% assign d = site.data.dates %}
+<section id="dates" class="section alt">
+  <div class="container">
+    <h2>Important Dates</h2>
+    <dl class="dates">
+      {% for item in d.items %}
+      <div class="date-row"><dt>{{ item.event }}</dt><dd>{{ item.date }}</dd></div>
+      {% endfor %}
+    </dl>
+    {% if d.note %}<p class="muted">{{ d.note }}</p>{% endif %}
+  </div>
+</section>
